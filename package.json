@@ -1,0 +1,64 @@
+{
+  "name": "vuetest0722",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@inotom/vue-go-top": "^1.3.0",
+    "core-js": "^3.8.3",
+    "jquery": "^3.6.0",
+    "konva": "^8.3.10",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.2",
+    "swiper": "^8.3.1",
+    "vue": "^3.2.13",
+    "vue-konva": "^3.0.0",
+    "vue-router": "^4.1.6",
+    "vue-scroll-up": "^2.0.0",
+    "vue-spin-wheel": "^1.1.0",
+    "vue3-circle-progress": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vitejs/plugin-vue": "^2.1.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.2.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vite": "^2.7.0"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {},
+    "globals": {
+      "todoEventBus": "readable"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "tags": [
+    "swiper"
+  ]
+}

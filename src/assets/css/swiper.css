@@ -1,0 +1,115 @@
+  /* swiper css */
+  .swiper {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+  }
+  .swiper-autoheight, .swiper-autoheight .swiper-slide {
+    height: 100% !important;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-vertical.swiper-pagination-bullets,
+  .swiper-vertical > .swiper-pagination-bullets {
+    right: 20px;
+    top: 50%;
+    transform: translate3d(0px, -50%, 0);
+  }
+  /* .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 12px) 7px;
+    display: block;
+  } */
+
+  .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+   .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap,13px) 7px !important;
+    display: block;
+}
+
+  .swiper-pagination-bullet:hover {
+    transform: scale(1.5, 1.5);
+    transition: 0.4s;
+  }
+  
+  .swiper-pagination-bullet-active {
+    --swiper-theme-color: #6d7177;
+  }
+  
+  .footerslide{
+    width:100%;
+    height:60%;
+    /* background-color:yellow; */
+  }
+  .swiper-wrapper>div:nth-child(6){
+    width:100%;
+    /* height:60% !important; */
+    background-color:#fff;
+  }
+  
+  /* swiper2 css */
+  .mySwiper2 .swiper-pagination-vertical.swiper-pagination-bullets,
+  .mySwiper2 .swiper-vertical > .swiper-pagination-bullets {
+    /* https://velog.io/@kyh196201/2021.06.28-vue3-swipervue-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0 */
+      top:90px !important;
+      right:90px !important;
+      display:flex;
+  }
+  
+  
+  .mySwiper2 .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom:50px !important;
+    right:-330px !important;
+    margin-right:90px;
+    z-index: 15 !important;
+  }
+  
+  .mySwiper2 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: var(--swiper-pagination-bullet-vertical-gap, 12px) 7px;
+      display: block;
+  }
+  
+  .mySwiper2 .swiper-pagination-bullet{
+    width:60px;
+    height:10px;
+  }
+  .mySwiper2 .swiper-pagination-bullet{
+    border-radius : 0;
+  } 
+  .mySwiper2 .swiper-button-next,
+  .mySwiper2 .swiper-rtl .swiper-button-prev{
+    right:50px;
+  }
+  .mySwiper2 .swiper-pagination-bullet:hover {
+      transform: scale(1, 1) !important;
+      transition: 0.4s;
+  }
+  

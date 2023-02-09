@@ -1,0 +1,6 @@
+/* 흰색 폰트 */
+.font-white{ 
+    color: transparent;
+    -webkit-text-stroke-color: #222;
+    -webkit-text-stroke-width: thin;
+}
