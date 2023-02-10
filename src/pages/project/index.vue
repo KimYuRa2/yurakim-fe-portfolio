@@ -209,8 +209,7 @@
                   <ul>
                     <li>(Frontend) HTML5 / CSS3 / Javascript / jQuery</li>
                     <li>(Backend) node.js </li>
-                    <li>(DB) mysql </li>
-                    <li>(Deploy) Fly.io</li>
+                    <li>(Deploy) Firebase</li>
                     <li>(Design) Figma</li>
                     <li>(VC) Git</li>
                   </ul>
@@ -223,8 +222,8 @@
               <li>
                 <span class="half-highlight">URL</span>
                 <span class="r_span">
-                  <a href="https://heynature.fly.dev/" target="_blank">
-                    https://heynature.fly.dev/
+                  <a href="https://kyr-portfolio.web.app/" target="_blank">
+                    https://kyr-portfolio.web.app/
                   </a>
                 </span>
               </li>
