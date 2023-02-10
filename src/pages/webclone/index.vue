@@ -48,7 +48,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani1" 
           style=""
         >
 					<div class="cplp_info">
@@ -98,7 +98,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani2" 
           style=""
         >
 					<div class="cplp_info">
@@ -148,7 +148,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani3" 
           style=""
         >
 					<div class="cplp_info">
@@ -300,13 +300,13 @@ export default {
   }
 
   .ani1{
-    /* background-image:url('../../assets/images/Animation-sing.gif'); */
+    background-image:url('../../assets/images/Animation-sing.gif');
   }
   .ani2{
-    /* background-image:url('../../assets/images/Animation-dae.gif'); */
+    background-image:url('../../assets/images/Animation-dae.gif');
   }
   .ani3{
-    /* background-image:url('../../assets/images/Animation-pollex.gif'); */
+    background-image:url('../../assets/images/Animation-pollex.gif');
   }
 
 

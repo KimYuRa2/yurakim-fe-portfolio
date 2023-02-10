@@ -57,7 +57,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic" 
+          class="cpl_pic ani4" 
           style=""
         >
 					<div class="cplp_info">
@@ -116,7 +116,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani5" 
           style=""
         >
 					<div class="cplp_info">
@@ -175,7 +175,7 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani6" 
           style=""
         >
 					<div class="cplp_info">
@@ -387,13 +387,16 @@ export default {
   }
 
   .ani4{
-    /* background-image:url('../../assets/images/Animation-seomun.gif'); */
+    background-image:url('../../assets/images/Animation-seomun.gif');
   }
   .ani5{
-    /* background-image:url('../../assets/images/Animation-hey1.0.gif'); */
+    background-image:url('../../assets/images/Animation-hey1.0.gif');
   }
   .ani6{
-    /* background-image:url('../../assets/images/Animation-pollex.gif'); */
+    background-image:url('../../assets/images/Animation-hey2.0.gif');
+  }
+  .ani7{
+    /* background-image:url('../../assets/images/Animation-porfolio.gif'); */
   }
 
 
