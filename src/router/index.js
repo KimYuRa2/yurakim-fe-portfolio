@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 import Main from '../pages/index.vue';
 import Webclone from '../pages/webclone/index.vue';
 import Project from '../pages/project/index.vue';
+import Contact from '../pages/contact/index.vue';
 
 
 const router = createRouter({
@@ -25,7 +26,13 @@ const router = createRouter({
             path : '/project', // url
             name : 'Project',
             component : Project
-        }
+        },
+        {
+            /* contact */
+            path : '/contact', // url
+            name : 'Contact',
+            component : Contact
+        },
     ]
 })
 

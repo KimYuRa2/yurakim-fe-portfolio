@@ -42,6 +42,9 @@
                             <li>
                                 <router-link :to="{ name : 'Project' }" @click="menuclose">PROJECT</router-link>
                             </li>
+                            <li>
+                                <router-link :to="{ name : 'Contact' }" @click="menuclose">CONTACT ME</router-link>
+                            </li>
                         </ul>
                     </nav>
                     

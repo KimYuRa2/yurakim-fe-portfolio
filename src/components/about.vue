@@ -476,7 +476,7 @@ export default{
   height:30px;
 }
 .aicon1{
-  background-image: url("../assets/images/pngwing.com (12).png");
+  background-image: url("../assets/images/contact.png");
   background-size:100% 100%;
 }
 .aicon2{
@@ -484,7 +484,7 @@ export default{
   background-size:100% 100%;
 }
 .aicon3{
-   background-image: url("../assets/images/pngwing.com (13).png");
+   background-image: url("../assets/images/email.png");
   background-size:100% 100%;
 }
 .about_txt{

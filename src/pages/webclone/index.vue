@@ -38,7 +38,7 @@
                 <span class="half-highlight">URL</span>
                 <span class="r_span">
                   <a href="http://fronttest1.dothome.co.kr/sing.html" target="_blank">
-                    http://fronttest1.dothome.co.kr/
+                    http://fronttest1.dothome.co.kr/sing.html
                   </a>
                 </span>
               </li>
@@ -52,10 +52,8 @@
           style=""
         >
 					<div class="cplp_info">
-						<a href="">
-              <span class="blind">MORE</span>
-            </a>
-						<strong>VIEW</strong>
+              VIEW
+              <a href="http://fronttest1.dothome.co.kr/sing.html"></a>
 					</div>
 				</div>
       </div>
@@ -88,7 +86,7 @@
                 <span class="half-highlight">URL</span>
                 <span class="r_span">
                   <a href="http://fronttest1.dothome.co.kr/dae.html" target="_blank">
-                    http://fronttest1.dothome.co.kr/
+                    http://fronttest1.dothome.co.kr/dae.html
                   </a>
                 </span>
               </li>
@@ -102,10 +100,8 @@
           style=""
         >
 					<div class="cplp_info">
-						<a href="">
-              <span class="blind">MORE</span>
-            </a>
-						<strong>VIEW</strong>
+            VIEW
+            <a href="http://fronttest1.dothome.co.kr/dae.html"></a>
 					</div>
 				</div>
       </div>
@@ -138,7 +134,7 @@
                 <span class="half-highlight">URL</span>
                 <span class="r_span">
                   <a href="http://fronttest1.dothome.co.kr/pollex.html" target="_blank">
-                    http://fronttest1.dothome.co.kr/
+                    http://fronttest1.dothome.co.kr/pollex.html
                   </a>
                 </span>
               </li>
@@ -152,10 +148,8 @@
           style=""
         >
 					<div class="cplp_info">
-						<a href="">
-              <span class="blind">MORE</span>
-            </a>
-						<strong>VIEW</strong>
+            VIEW
+              <a href="http://fronttest1.dothome.co.kr/pollex.html"></a>
 					</div>
 				</div>
       </div>
@@ -251,7 +245,7 @@ export default {
     width: 40px;
     height: 5px;
     border-radius: 1px;
-    background-color: #111427;
+    background-color: #ffe618;
   }
   .content_c .content_ul{
     display: inline-block;
@@ -314,7 +308,11 @@ export default {
 
 
   .cplp_info {
-    display: inline-block;
+    /* text-align: center;
+    display: inline-block; */
+    display : flex;
+    justify-content : center;
+    align-items : center;
     vertical-align: middle;
     position: absolute;
     left: 0;
@@ -322,11 +320,19 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(17, 20, 39, 0.8);
-    transform: scale(2);
+    /* transform: scale(2); */
     opacity: 0;
     transition: 0.3s;
     -webkit-transition: 0.3s;
+    color: #fff;
+    font-size: 20px;
   }
+  .cplp_info:hover{
+    /* transform:scale(1.5); */
+    transition: transform .5s;
+    opacity:1;
+  }
+
   .cplp_info a {
     display: inline-block;
     vertical-align: middle;
