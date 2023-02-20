@@ -1,6 +1,4 @@
 <template>
-  <!-- <div>Project page</div> -->
-
   <div class="p_wrap">
     <div class="p_title">
       <h2 class="ct_m">PROJECT</h2>
@@ -31,7 +29,7 @@
                 <span class="half-highlight">Technologies</span>
                 <span class="r_span">
                   <ul>
-                    <li>(Frontend) HTML5 / CSS3 / Javascript / jQuery</li>
+                    <li>(Frontend) Javascript / jQuery / HTML5 / CSS3 </li>
                     <li>(Backend) node.js </li>
                     <li>(DB) mysql </li>
                     <li>(Deploy) Fly.io</li>
@@ -98,7 +96,7 @@
                 <span class="half-highlight">Technologies</span>
                 <span class="r_span">
                   <ul>
-                    <li>(Frontend) HTML5 / CSS3 / Javascript / jQuery</li>
+                    <li>(Frontend)  Javascript / jQuery / HTML5 / CSS3</li>
                     <li>(Backend) node.js </li>
                     <li>(DB) mysql </li>
                     <li>(Deploy) Fly.io </li>
@@ -106,10 +104,6 @@
                     <li>(VC) Git</li>
                   </ul>
                 </span>
-                <!-- <ul class="tech_ul">
-                  <li>html/css/플러그인 적용 경험</li>
-                  <li>반응형 웹</li>
-                </ul> -->
               </li>
               <li>
                 <span class="half-highlight">주요기능</span>
@@ -179,8 +173,8 @@
                 <span class="half-highlight">Technologies</span>
                 <span class="r_span">
                   <ul>
-                    <li>(Frontend) HTML5 / CSS3 / Javascript / jQuery </li>
-                    <li>(Backend) node.js </li>
+                    <li>(Frontend)  Javascript / jQuery / HTML5 / CSS3 </li>
+                    <li>(Backend) Node.js </li>
                     <li>(DB) mysql/ AWS S3 </li>
                     <li>(Deploy) Fly.io</li>
                     <li>(Design) Figma</li>
@@ -256,7 +250,7 @@
                 <span class="half-highlight">Technologies</span>
                 <span class="r_span">
                   <ul>
-                    <li>(Frontend) Javascript / Vue.js/ Axios/ Bootstrap4</li>
+                    <li>(Frontend)  Vue.js / Javascript / Axios / Bootstrap4</li>
                     <li>(Server) JSON Server</li>
                     <li>(VC) Git</li>
                   </ul>
@@ -311,8 +305,7 @@
                 <span class="half-highlight">Technologies</span>
                 <span class="r_span">
                   <ul>
-                    <li>(Frontend) HTML5 / CSS3 / Javascript / jQuery</li>
-                    <li>(Backend) node.js </li>
+                    <li>(Frontend) Vue.js / javascript / HTML5 / CSS3</li>
                     <li>(Deploy) Firebase</li>
                     <li>(Design) Figma</li>
                     <li>(VC) Git</li>
@@ -351,15 +344,28 @@
 				</div>
       </div>
 
-
+      
 
       
+
     </div>
+
+    <Scrolltop></Scrolltop>
+
+    <Footer></Footer>
   </div>
+
+  
 </template>
 
 <script>
+import Footer from '@/components/footer.vue';
+import Scrolltop from '@/components/scrolltop.vue';
 export default {
+  components: {
+    Footer,
+    Scrolltop,
+  }
 
 }
 </script>

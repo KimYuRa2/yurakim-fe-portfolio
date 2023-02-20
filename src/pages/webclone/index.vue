@@ -1,5 +1,4 @@
 <template>
-  <!-- <div>webclone page</div> -->
 
   <div class="p_wrap">
     <div class="p_title">
@@ -11,6 +10,7 @@
         WEBCLONE
       </div>
 
+      <!--싱그러운집-->
       <div class="p_b_wrap">
         <div class="p_b_content">
           <div class="content_title"> 
@@ -28,11 +28,7 @@
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
-                <span class="r_span"> HTML5 / CSS3 / Javascript / jQuery </span>
-                <!-- <ul class="tech_ul">
-                  <li>html/css/플러그인 적용 경험</li>
-                  <li>반응형 웹</li>
-                </ul> -->
+                <span class="r_span">  Javascript / jQuery / HTML5 / CSS3 </span>
               </li>
               <li>
                 <span class="half-highlight">URL</span>
@@ -76,11 +72,7 @@
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
-                <span class="r_span"> HTML5 / CSS3 / Javascript / jQuery </span>
-                <!-- <ul class="tech_ul">
-                  <li>html/css/플러그인 적용 경험</li>
-                  <li>반응형 웹</li>
-                </ul> -->
+                <span class="r_span">  Javascript / jQuery / HTML5 / CSS3 </span>
               </li>
               <li>
                 <span class="half-highlight">URL</span>
@@ -124,11 +116,7 @@
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
-                <span class="r_span"> HTML5 / CSS3 / Javascript / jQuery </span>
-                <!-- <ul class="tech_ul">
-                  <li>html/css/플러그인 적용 경험</li>
-                  <li>반응형 웹</li>
-                </ul> -->
+                <span class="r_span">  Javascript / jQuery / HTML5 / CSS3 </span>
               </li>
               <li>
                 <span class="half-highlight">URL</span>
@@ -154,17 +142,32 @@
 				</div>
       </div>
 
-
-      
     </div>
+    
+    <!--scrolltop 버튼-->
+    <Scrolltop></Scrolltop>
+
+    <!--footer-->
+    <Footer></Footer>
+
+
+    
+
   </div>
 </template>
 
 <script>
-export default {
-  setup(){
-  }
+import Footer from '@/components/footer.vue';
+import Scrolltop from '@/components/scrolltop.vue';
 
+export default {
+  components: {
+    Footer,
+    Scrolltop,
+  },
+  setup(){
+
+  }
 }
 </script>
 
@@ -178,7 +181,6 @@ export default {
   }
   .p_title{
     margin-top : 180px;
-    /* background-color: yellow; */
   }
   .ct_m{
     display: inline-block;
@@ -272,12 +274,6 @@ export default {
     padding-top:5px;
   }
 
-
-  .p_b_img{
-    
-
-  }
-
   .cpl_pic {
     display: inline-block;
     vertical-align: middle;
@@ -344,4 +340,6 @@ export default {
     height: 100%;
   }
   
+
+
 </style>

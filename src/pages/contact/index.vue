@@ -17,27 +17,44 @@
                 <span class="half-highlight">내이메일</span>
                 <input type="email" name="user_email"/>
               </li>
+
               <li>
                 <span class="half-highlight">회사명</span>
-                
-                <input type="text" name="company_name"/>
-                
-                
+                <input type="text" name="company_name" v-model="company_name"/>
               </li>
               <li>
                 <span class="half-highlight">연락처</span>
-                <input type="number" name="company_phonenum"/>
+                <input type="text" name="company_phonenum" v-model="company_phonenum" maxlength="13" placeholder="-없이 숫자만 입력해 주세요."/>
               </li>
               <li>
                 <span class="half-highlight">이메일</span>
-                <input type="email" name="company_email"/>
+                <input type="email" name="company_email"  v-model="company_email" placeholder="예) test@test.com"/>
+              </li>
+              <li v-show="valid.company_email" class="input_error">
+                * 이메일 주소를 정확히 입력해주세요.
               </li>
               <li>
                 <span class="half-highlight">메세지</span>
-                <textarea name="message"></textarea>
+                <textarea name="message" v-model="message"></textarea>
               </li>
               <li>
-                <button class="con_btn" type="submit">보내기</button>
+                <button 
+                  class="con_btn" 
+                  type="submit" 
+                  :disabled="message.length<1 || company_email.length<1 || company_phonenum.length<1"
+                  @click="afterSend"
+                  :class="{disnone: afterMessage}"
+                >
+                  보내기
+                </button>
+              </li>
+              <li
+                :class="{disnone: !afterMessage}"
+                class="thankyouMessage"
+              >
+                감사합니다 :)
+                <br/>
+                빠른 시일 내에 연락 드리도록 하겠습니다.
               </li>
             </ul>
           </div>
@@ -47,19 +64,34 @@
       
     </div>
 
+    <!--side-->
     <div class="p_side">
-      <div class="side_right" style="box-shadow: 0 20px 40px rgb(17 20 39 / 15%);">
+      <div 
+        class="side_right" 
+        @mouseover="imghovered" 
+        @mouseleave="imghovered"
+        style=""
+      >
         <img src="@/assets/images/contact.png"/>
-        <!-- <div style="white-space: nowrap; text-align: center;">
-          010-4814-3118
-        </div> -->
       </div>
+      <div 
+        class="side_right_text half-highlight"
+        v-show="imghover"
+        style=""
+      >
+        010 - 4814 - 3118
+      </div>
+      
+      
       <div class="side_left" style="">
         <a href="https://github.com/KimYuRa2/">
           <img src="@/assets/images/git-hub.png"/>
         </a>
       </div>
     </div>
+
+    <!--scrolltop-->
+    <Scrolltop></Scrolltop>
 
       <!--footer-->
       <div class="p_footer" style="">
@@ -75,14 +107,20 @@
         </div>
         <div class="footer_img">
           <a href="">
-            <img src="@/assets/images/email.png"/>
+            <img src="@/assets/images/email3.png"/>
           </a>
           <a href="">
             <img src="@/assets/images/git-hub.png"/>
           </a>
         </div>
       </div>
+
+
+
   </div>
+
+      
+
 
 
   
@@ -90,10 +128,26 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import { ref, watch } from 'vue';
+import Scrolltop from '@/components/scrolltop.vue';
 
 export default {
-
+  components: {
+    Scrolltop,
+  },
   setup(){
+    const message=ref('');
+    const company_name = ref('');
+    const company_email = ref('');
+    const company_phonenum = ref('');
+    const valid = ref({
+      company_email: '',
+      password: ''
+    })
+    const emailHasError = ref(false);
+    const afterMessage = ref(false);
+    const imghover = ref(false);
+
     const sendEmail = (e) => {
       emailjs.sendForm('service_87phd4w', 'template_5tgv6up', e.target, 'D7jfHhJbNEdrm0Mpz')
         .then((result) => {
@@ -103,8 +157,89 @@ export default {
         });
     }
 
+    const checkEmail = () => {
+      // 이메일 형식 검사
+      const validateEmail = /^[A-Za-z0-9_\\.\\-]+@[A-Za-z0-9\\-]+\.[A-Za-z0-9\\-]+/
+
+      if (!validateEmail.test(company_email.value) || !company_email.value) {
+        valid.value.company_email = true;
+        emailHasError.value = true;
+        return;
+      } valid.value.company_email = false;
+        emailHasError.value = false;
+    }
+
+    //`v-model`로 걸어둔 email이랑 password input창이 변하는것을 
+    //`watch`로 감시하고 변경이되면 `methods`가 실행된다.
+    // 따라서 실시간으로 이메일 형식이 맞는지 판단할 수 있다.
+    watch( company_email, () => {
+      checkEmail();
+    });
+    // watchEffect( () => {
+    //   console.log(company_email.value);
+    // })
+
+
+    /* 연락처 auto hyphen */
+    const autoHypenPhone= () => {
+      const str = company_phonenum.value.replace(/[^0-9]/g, '');
+      console.log("dd"+str);
+      var tmp = '';
+      if (str.length < 4) {
+        return str;
+      }else if( str.length < 7) {
+        tmp += str.substring(0,3);
+        tmp += '-';
+        tmp += str.substring(3);
+        company_phonenum.value=tmp;
+        return company_phonenum;
+      }else if(str.length < 11){
+        tmp += str.substring(0, 3);
+        tmp += '-';
+        tmp += str.substring(3, 7);
+        tmp += '-';
+        tmp += str.substring(7);
+        company_phonenum.value=tmp;
+        return company_phonenum;
+      }else{              
+        tmp += str.substring(0, 3);
+        tmp += '-';
+        tmp += str.substring(3, 7);
+        tmp += '-';
+        tmp += str.substring(7);
+        company_phonenum.value=tmp;
+        return company_phonenum;
+      }
+    }
+
+    watch(company_phonenum, ()=>{
+      autoHypenPhone();
+    })
+
+    /* email send 후 */
+    const afterSend = () => {
+      afterMessage.value = !afterMessage.value;
+      console.log(afterMessage.value);
+    }
+
+    const imghovered = () => {
+      imghover.value = !imghover.value;
+    }
+
+
+
     return{
       sendEmail,
+      valid,
+      emailHasError,
+      message,
+      company_name,
+      company_email,
+      company_phonenum,
+      afterSend,
+      afterMessage,
+      imghovered,
+      imghover
     }
   }
 }
@@ -345,6 +480,7 @@ export default {
 
 .con_btn {
     min-width: 250px;
+    cursor:pointer;
     height: 60px;
     padding: 0px 40px;
     font-size: 18px;
@@ -354,6 +490,11 @@ export default {
     background-color: #111427;
     color: #fff;
     font-family: "Pretendard-Bold";
+}
+.con_btn:disabled{
+  opacity: 0.3;
+  -webkit-transition: none;
+  transition: none;
 }
 
 
@@ -368,11 +509,26 @@ export default {
   transform:translate(0,-50%);
   box-shadow: 0 50px 100px rgb(17 20 39 / 20%);
 }
+.side_right_text{
+  position:fixed; 
+  /* width:60px; 
+  height:60px; */
+  top:50%; 
+  right:100px; 
+  transform:translate(0,-50%);
+  box-shadow: 0 50px 100px rgb(17 20 39 / 20%);
+  font-size: 18px;
+}
 .side_right img{
   width:100%;
   height:100%;
   -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
   filter : opacity(.5) drop-shadow(0 0 0 gray);
+}
+.side_right img:hover{
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 white);
+  filter : opacity(0.5) drop-shadow(0 0 0 white);
+  cursor:pointer;
 }
 .side_left{
   position:fixed; 
@@ -389,6 +545,11 @@ export default {
   height:100%;
   -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
   filter : opacity(.5) drop-shadow(0 0 0 gray);
+}
+.side_left img:hover{
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 white);
+  filter : opacity(0.5) drop-shadow(0 0 0 white);
+  cursor:pointer;
 }
 .p_footer{
   width:100%; 
@@ -408,11 +569,36 @@ export default {
 .footer_sendmail a:hover{
   color:#ffe618;
 }
+.footer_img{
+  display:flex;
+}
+.footer_img a{
+  display: block;
+  width:100%;
+  height:100%;
+}
 .footer_img img{
   width: 30px;
   height: 30px;
   margin-left: 5px;
   -webkit-filter: opacity(.5) drop-shadow(0 0 0 #fff);
   filter : opacity(.5) drop-shadow(0 0 0 #fff);
+  object-fit: cover;
 }
+
+.input_error {
+    line-height: 16px;
+    font-size: 11px;
+    color:red;
+    margin-left:75px;
+}
+.disnone{
+  display:none !important;
+}
+.thankyouMessage{
+  text-align : center;
+  font-size : 18px;
+  margin-top : 30px;
+}
+
 </style>

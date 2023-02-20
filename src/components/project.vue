@@ -1,7 +1,5 @@
 <template id="projectpage">
 
-
-<!-- <div :class="[{cursor2:isCursor}, {hovered2:isHovered}, {'drag': hovermouse2 === true}]"></div> -->
 <div class="project_wrap">
     <div class="project_right"  @mouseover="hovermouse2=true;" @mouseleave="hovermouse2=false;">
       <swiper
@@ -13,13 +11,14 @@
         :modules="modules"
         class="mySwiper3"
       >
+        <!--서문야시장-->
         <swiper-slide>
           <div 
             class="project_sec projectimg1" 
             @mouseover="projecthover1=true" 
             @mouseleave="projecthover1=false"
           >
-            <a href="https://seomunapp.fly.dev/" target="_blank">
+            <a href="https://seomun-app.fly.dev/" target="_blank">
 
               <!--1229 깜빡임오류 해결-->
               <div class="project_name">
@@ -27,10 +26,10 @@
                   v-if="projecthover1" 
                   class="projecthover_img"
                 >
-                  <img src="../assets/images/html.png">
-                  <img src="../assets/images/css.png">
                   <img src="../assets/images/javascript.png">
                   <img src="../assets/images/about6.png">
+                  <img src="../assets/images/html.png">
+                  <img src="../assets/images/css.png">
                   <img src="../assets/images/node.png">
                   <img src="../assets/images/about7.png">
                   <img src="../assets/images/flyio.png">
@@ -38,7 +37,7 @@
                 </div>
                 <p class="projectname_txt1 white_txt">서문시장 야시장</p>
                 <div class="projecthover_txt white_txt" v-if="projecthover1">
-                  HTML / CSS / JS / jQuery<br>
+                  Javascript / jQuery / HTML / CSS /<br>
                   node.js / mysql / fly.io / github <br>
                   서문시장 야시장 반응형 홈페이지 리뉴얼
                 </div>
@@ -51,15 +50,16 @@
           </div>
         </swiper-slide>
 
+        <!--헤이네이처(팀플젝)-->
         <swiper-slide>
           <div class="project_sec projectimg2" @mouseover="projecthover2=true" @mouseleave="projecthover2=false">
-            <a href="https://frontend-teamproject-heynature.fly.dev/" target="_blank">
+            <a href="https://heynature-teamproject.fly.dev/" target="_blank">
               <div class="project_name">
                 <div v-if="projecthover2" class="projecthover_img">
-                  <img src="../assets/images/html.png">
-                  <img src="../assets/images/css.png">
                   <img src="../assets/images/javascript.png">
                   <img src="../assets/images/about6.png">
+                  <img src="../assets/images/html.png">
+                  <img src="../assets/images/css.png">
                   <img src="../assets/images/node.png">
                   <img src="../assets/images/about7.png">
                   <img src="../assets/images/flyio.png">
@@ -67,7 +67,7 @@
                 </div>
                 <p class="projectname_txt1 white_txt">헤이네이처</p>
                 <div class="projecthover_txt white_txt" v-if="projecthover2">
-                  HTML / CSS/ JS / jQuery /<br>
+                  Javascript / jQuery / HTML / CSS /<br>
                   node.js / mysql / fly.io / github<br>
                   팀프로젝트 - 헤이네이처 반응형 홈페이지 리뉴얼
                 </div>
@@ -80,16 +80,16 @@
           </div>
         </swiper-slide>
 
-<!-- 프로젝트 추가 - 헤이네이처ver2-->
+        <!-- 프로젝트 추가 - 헤이네이처ver2-->
         <swiper-slide>
           <div class="project_sec projectimg4" @mouseover="projecthover4=true" @mouseleave="projecthover4=false">
             <a href="https://heynature.fly.dev/" target="_blank">
               <div class="project_name">
                 <div v-if="projecthover4" class="projecthover_img">
-                  <img src="../assets/images/html.png">
-                  <img src="../assets/images/css.png">
                   <img src="../assets/images/javascript.png">
                   <img src="../assets/images/about6.png">
+                  <img src="../assets/images/html.png">
+                  <img src="../assets/images/css.png">
                   <img src="../assets/images/node.png">
                   <img src="../assets/images/about7.png">
                   <img src="../assets/images/flyio.png">
@@ -98,7 +98,7 @@
                 </div>
                 <p class="projectname_txt1">헤이네이처 2.0</p>
                 <div class="projecthover_txt" v-if="projecthover4">
-                  HTML / CSS/ JS / jQuery /<br>
+                  Javascript / jQuery / HTML / CSS /<br>
                   node.js / mysql / fly.io / github<br>
                   AWS S3<br>
                   개인프로젝트 - 헤이네이처 쇼핑몰 기능 구현<br>
@@ -113,16 +113,45 @@
           </div>
         </swiper-slide>
 
+        <!-- todolist -->
+        <swiper-slide>
+          <div class="project_sec projectimg5" @mouseover="projecthover5=true" @mouseleave="projecthover5=false">
+            <a href="https://github.com/KimYuRa2/vue3-project" target="_blank">
+              <div class="project_name">
+                <div v-if="projecthover5" class="projecthover_img">
+                  <img src="../assets/images/about4.png">
+                  <img src="../assets/images/javascript.png">
+                  <img src="../assets/images/axios.png">
+                  <img src="../assets/images/json.png">
+                  <img src="../assets/images/bootstrap3.png">
+                  <img src="../assets/images/css.png">
+                  <img src="../assets/images/about8.png">
+                </div>
+                <p class="projectname_txt1">Todo List</p>
+                <div class="projecthover_txt" v-if="projecthover5">
+                  Vue.js / Javascript / Axios / JSON Server /<br>
+                  Bootstrap4 / CSS /  github<br>
+                  vue3로 구현한 todolist<br>
+                </div>
+                <p class="projectname_txt2">
+                  Todo List <br>
+                  ( DEVELOP )
+                </p>
+              </div>
+            </a>
+          </div>
+        </swiper-slide>
+
+        <!-- 포트폴리오 -->
         <swiper-slide>
           <div class="project_sec projectimg3" @mouseover="projecthover3=true" @mouseleave="projecthover3=false">
-            <a href="" target="_blank">
+            <a href="https://kyr-portfolio.web.app/" target="_blank">
               <div class="project_name">
                 <div v-if="projecthover3" class="projecthover_img">
+                  <img src="../assets/images/about4.png">
+                  <img src="../assets/images/javascript.png">
                   <img src="../assets/images/html.png">
                   <img src="../assets/images/css.png">
-                  <img src="../assets/images/javascript.png">
-                  <img src="../assets/images/about6.png">
-                  <img src="../assets/images/about4.png">
                   <img src="../assets/images/node.png">
                   <img src="../assets/images/about7.png">
                   <img src="../assets/images/flyio.png">
@@ -130,12 +159,12 @@
                 </div>
                 <p class="projectname_txt1">포트폴리오</p>
                 <div class="projecthover_txt" v-if="projecthover3">
-                  HTML / CSS / JS / jQuery / Vue.js<br>
+                  Vue.js / Javascript / HTML / CSS /<br>
                   node.js / mysql / fly.io / github <br>
                   포트폴리오 페이지 제작
                 </div>
                 <p class="projectname_txt2">
-                  PORTFOLIO SITE CREATION<br>
+                  PORTFOLIO SITE CREATION (PC)<br>
                   ( DESIGN / DEVELOP )
                 </p>
               </div>
@@ -182,6 +211,7 @@ export default {
       projecthover2:false,
       projecthover3:false,
       projecthover4:false,
+      projecthover5:false,
       hovermouse2:false,
       isCursor:true,
       isHovered:true
@@ -309,6 +339,14 @@ a{
 .projectimg4>a{
   display:block;
   background-image:url('../assets/images/shopping-bag-perspective.png');
+  background-position: 35% center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  position:relative;
+}
+.projectimg5>a{
+  display:block;
+  background-image:url('../assets/images/todo4.jpg');
   background-position: 35% center;
   background-size: auto 100%;
   background-repeat: no-repeat;

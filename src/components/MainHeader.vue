@@ -22,8 +22,7 @@
                 <div class="nav-inner">
                     <div class="logo_wrap">
                         <div class="side_logo">
-                            <a href="">
-                            </a>
+                            <router-link :to="{ name : 'Main' }" @click="menuclose"></router-link>
                         </div>
                         <div class="menuclose" @click="menuclose">
                             <a href="javascript:void(0)">
