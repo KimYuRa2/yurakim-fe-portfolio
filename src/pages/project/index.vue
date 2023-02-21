@@ -334,12 +334,12 @@
 
         <!--이미지-->
         <div
-          class="cpl_pic " 
+          class="cpl_pic ani8" 
           style=""
         >
 					<div class="cplp_info">
 						VIEW
-            <a href="https://heynature.fly.dev/"></a>
+            <a href="https://kyr-portfolio.web.app/"></a>
 					</div>
 				</div>
       </div>
@@ -516,6 +516,9 @@ export default {
   }
   .ani7{
     background-image:url('../../assets/images/Animation-todo.gif');
+  }
+  .ani8{
+    background-image:url('../../assets/images/Animation-portfolio2.gif');
   }
 
 
