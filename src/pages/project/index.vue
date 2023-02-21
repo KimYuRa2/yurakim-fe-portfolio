@@ -90,7 +90,7 @@
               </li>
               <li>
                 <span class="half-highlight">Duration</span>
-                <span class="r_span">2022. 10. 04 - 11. 07</span>
+                <span class="r_span">2022. 05. 26 - 06. 30</span>
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
@@ -167,7 +167,7 @@
               </li>
               <li>
                 <span class="half-highlight">Duration</span>
-                <span class="r_span">2022. 05. 26 - 06. 30</span>
+                <span class="r_span">2022. 10. 04 - 11. 07</span>
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
