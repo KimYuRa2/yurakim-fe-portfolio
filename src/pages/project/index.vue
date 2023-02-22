@@ -299,7 +299,7 @@
               </li>
               <li>
                 <span class="half-highlight">Duration</span>
-                <span class="r_span">2022. 01. 05 - 01. 30</span>
+                <span class="r_span">2023. 02. 06 - 02. 21</span>
               </li>
               <li>
                 <span class="half-highlight">Technologies</span>
