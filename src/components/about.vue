@@ -12,7 +12,7 @@
 
       <div class="about_mid">
         <p>
-          안녕하세요
+          안녕하세요!
         </p>
         <p>
           <span class="font-white">김유라</span>입니다.
@@ -20,13 +20,19 @@
       </div>
 
       <div class="about_mid2">
-        소통하며 개발하는 프론트엔드 개발자입니다.
-        <br>
-        소프트웨어 전공으로 배운 백엔드 지식을 기반으로 함께 소통하며,
-        <br>
-        열린 사고와 태도를 바탕으로 새로운 것을 알아감에 두려워 하지 않습니다.
-        <br>
-        사용자의 관점에서 생각하고, 누구나 편하게 이용할 수 있는 웹을 만드는 사람이 되겠습니다.
+        <p>
+          소통하며 개발하는 프론트엔드 개발자입니다.
+        </p>
+        <p>
+          소프트웨어 전공으로 배운 백엔드 지식을 기반으로 함께 소통하며,
+        </p>
+        <p>
+          열린 사고와 태도를 바탕으로 새로운 것을 알아감에 두려워 하지 않습니다.
+        </p>
+        <p>
+          사용자의 관점에서 생각하고, 누구나 편하게 이용할 수 있는 웹을 만드는 사람이 되겠습니다.
+        </p>
+
       </div>
 
       <div class="about_bottom">
@@ -45,7 +51,37 @@
           <div class="about_txt">010 - 4814 - 3118</div> 
         </div>
       </div>
+
+
+      <!-- ~1024 기술스택-->
+      <div class="skill_m">
+        <div>
+          <!--프론트엔드-html/css/javascript/jquery/vue/-->
+          <div class="img1"></div>
+          <div class="img2"></div>
+          <div class="img3_j"></div>
+          <div class="img4"></div>
+          <div class="img6"></div>
+        </div>
+        <div>
+          <!--백엔드 : nodejs/mysql/git-->
+          <div class="img5"></div>
+          <div class="img7"></div>
+          <div class="img8"></div>
+          <div class="img9"></div>
+          <div class="img10"></div>
+          <div class="img11"></div>
+        </div>
+        <div>
+          <!--디자인: photoshop/illustrator/figma-->
+          <div class="license_ps"></div>
+          <div class="license_illu"></div>
+          <div class="license_fig"></div>
+        </div>
+      </div>
     </div>
+
+    
 
     <!-- skill - vue circle progress bar  -->
     <div class="about_r">
@@ -177,7 +213,7 @@
         <div class="skillImg img9"></div>
       </div>
 
-`     <!---->`
+      <!-- 우측 스킬볼 -->
       <div class="box">
         <div 
           class="ball" 
@@ -431,7 +467,7 @@ export default{
   height:60%;
 }
 .about_l{
-  //overflow: hidden;
+  /* overflow: hidden; */
   padding-left: 300px;
   box-sizing: border-box;
   width:50%;
@@ -655,34 +691,79 @@ export default{
   height:100%;
   background-size:cover;
 }
-.skill1 .img1{
+.img1{
   /* html 이미지 */
   background-image:url('../assets/images/about1.png');
 }
-.skill1 .img2{
+.img2{
   background-image:url('../assets/images/about2.png');
 }
-.skill1 .img3{
+.img3{
   background-image:url('../assets/images/about3.png');
 }
-.skill1 .img4{
+.img3_j{
+  background-image:url('../assets/images/javascript.png');
+}
+.img4{
   background-image:url('../assets/images/about4.png');
 }
-.skill1 .img5{
+.img5{
   background-image:url('../assets/images/about5.png');
 }
-.skill1 .img6{
+.img6{
   background-image:url('../assets/images/about6.png');
 }
-.skill1 .img7{
+.img7{
   background-image:url('../assets/images/about7.png');
 }
-.skill1 .img8{
+.img8{
   background-image:url('../assets/images/about8.png');
 }
-.skill1 .img9{
+.img9{
   background-image:url('../assets/images/about9.png');
-}        
+}   
+.img10{
+  background-image:url('../assets/images/firebase.png');
+}
+.img11{
+  background-image:url('../assets/images/s3.png');
+}
+
+.license_ps{
+  background-image: url('../assets/images/PS3.png');
+}
+.license_illu{
+  background-image: url('../assets/images/AI2.png');
+}
+.license_fig{
+  background-image: url('../assets/images/Figma4.png');
+}
+/* ~1024 기술스택 이미지 */
+.skill_m{
+  margin-top: 40px;
+  display:none;
+}
+.skill_m div{
+  display:flex;
+  justify-content: center;
+  margin-bottom:10px;
+}
+.skill_m div:last-child{
+  margin-bottom:0;
+
+}
+.skill_m div div{
+  width:32px;
+  height:32px;
+  background-position:center center;
+  background-size: 100% 100%;
+  margin-right: 10px;
+}
+.skill_m div div:last-child{
+  margin-right: 0;
+}
+
+
 
 
 @media only screen and (max-width: 1600px) {
@@ -722,4 +803,79 @@ export default{
   }
 
 }
+
+
+@media only screen and (max-width: 1024px) {
+  
+  .about_t{
+    text-align:center;
+  }
+  .about_mid{
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 30px;
+    white-space: nowrap;
+  }
+  .about_mid>p{
+    line-height: 60px;
+    display: inline;
+  }
+  .about_mid2{
+    margin-top: 30px;
+    font-size:16px;
+    text-align: center;
+  }
+  .about_l{
+      padding-left: 0px;
+  }
+
+  .about_r{
+    /* background-color:blue; */
+    position:fixed;
+    z-index:99;
+    width:100%;
+    height:100%;
+  }
+  .about_bottom{
+    /* margin-top:38px; */
+    display:none;
+  }
+  .skill_m{
+    display:block;
+  }
+
+  .box{
+    width: 300px;
+    height: 300px;
+    top: 35%;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .ball a{
+    font-size:12px;
+    pointer-events: none; /* 클릭이벤트 막기 */
+    opacity:60%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .about_mid{
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 30px;
+    white-space: nowrap;
+  }
+  .about_mid>p{
+    line-height: 30px;
+    display: inline;
+  }
+  .about_mid2 p:nth-child(n+2):nth-child(-n+3){
+    display:inline;
+  }
+}
+
 </style>

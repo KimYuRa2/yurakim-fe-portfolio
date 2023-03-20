@@ -43,6 +43,9 @@
 
   
   <div class="bottom_page">
+    <div class="bottom_arrow">
+      <img src="@/assets/images/ico_arrow.png">
+    </div>
     <div>
       <span id="bottomtext">
         {{ cu_p }}
@@ -285,8 +288,21 @@ body {
   opacity: 1 !important;
 }
 
+.bottom_arrow{
+  left: 50%;
+  /* transform: translate(0, -50%); */
+  position: fixed;
+  bottom: 30px;
+  display:none;
+}
 .bottomtext{
   color: #999;
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom_arrow{
+    display:block;
+  }
 }
 
 

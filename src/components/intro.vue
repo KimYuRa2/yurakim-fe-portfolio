@@ -77,4 +77,25 @@ export default{
     opacity: 1;
   }
 }
+
+
+/* 반응형 1024 */
+@media only screen and (max-width: 1024px)
+{
+  .intro_txt{
+    text-align: center;
+  }
+  .intro_txt>span{
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+/* 반응형 768 */
+@media only screen and (max-width: 768px)
+{
+
+}
+
+
 </style>
